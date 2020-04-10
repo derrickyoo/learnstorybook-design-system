@@ -14,7 +14,13 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngx-ua-boostrap": [
+        "dist/ngx-ua-boostrap/ngx-ua-boostrap",
+        "dist/ngx-ua-boostrap"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

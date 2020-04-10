@@ -119,6 +119,46 @@
           }
         }
       }
+    },
+    "ngx-ua-boostrap": {
+      "projectType": "library",
+      "root": "projects/ngx-ua-boostrap",
+      "sourceRoot": "projects/ngx-ua-boostrap/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-ua-boostrap/tsconfig.lib.json",
+            "project": "projects/ngx-ua-boostrap/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-ua-boostrap/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-ua-boostrap/src/test.ts",
+            "tsConfig": "projects/ngx-ua-boostrap/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-ua-boostrap/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-ua-boostrap/tsconfig.lib.json",
+              "projects/ngx-ua-boostrap/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "learnstorybook-design-system"
 }
